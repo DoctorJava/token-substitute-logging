@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+project.webAppDirName = 'WebContent'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+	
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	
+	compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.25.2'
+	
+	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.29'
+	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+	compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+
+}
